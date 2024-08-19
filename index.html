@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.php">
+    <link rel="stylesheet" href="style.css">
+    <title>Asistencia</title>
+</head>
+<body>
+
+    <div class="text">
+        <h2>Asistencia de alumnos</h2>
+    </div>
+    
+    <div class="box">
+        <form action="main.php" method="get">
+
+            <label for="name">Nombre:</label> <br> 
+            <input type="text" name="nombre" required> <br> <br>
+    
+            <label for="edad">DNI:</label> <br> 
+            <input type="number" name="dni" required> <br> <br>
+    
+            <label for="fecha">Fecha:</label> <br> 
+            <input type="date" name="fecha" required> <br>
+
+            <div class="box-submit">
+                <input type="submit" value="enviar" id="submit">
+            </div>
+            
+    
+        </form>
+    </div>
+    
+
+</body>
+</html>
