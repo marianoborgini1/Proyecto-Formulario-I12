@@ -16,23 +16,27 @@
     <div class="box">
         <form action="main.php" method="get">
 
+            <label for="dni">DNI:</label> <br> 
+            <input type="number" name="dni" required> <br> <br>
+
             <label for="name">Nombre:</label> <br> 
             <input type="text" name="nombre" required> <br> <br>
-    
-            <label for="edad">DNI:</label> <br> 
-            <input type="number" name="dni" required> <br> <br>
-    
-            <label for="fecha">Fecha:</label> <br> 
-            <input type="date" name="fecha" required> <br>
+
+            <label for="apellido">Apellido:</label> <br> 
+            <input type="text" name="apellido" required> <br> <br>
+
+            <label for="año">Año:</label> <br> 
+            <input type="number" name="año" required> <br> <br>
+
+            <label for="observaciones">Observaciones: </label> <br>
+            <textarea name="observaciones" id="observaciones" resize="none" width="50px"></textarea> <br>
 
             <div class="box-submit">
                 <input type="submit" value="enviar" id="submit">
             </div>
-            
-    
+
         </form>
     </div>
     
-
 </body>
 </html>

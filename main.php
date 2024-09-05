@@ -1,23 +1,37 @@
 <?php
 
-    $nombre = $_GET['nombre'];
-    $dni = $_GET['dni'];
-    $fecha = $_GET['fecha'];
+    //conexion//
 
-    echo "<body style='background-color: #f1f1f1'>";
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "formulario_db";
 
+    $conn = new mysqli("localhost", "root", "", "formulario_db");   
+
+    // Verificar conexion //
+    if ($conn->connect_error) {
+        die("conexion fallida :" . $conn->connect_error);
+    }
     
-    echo "<h2 style='text-align: center; font-size: 30px; padding-top: 20px;'>Datos del formulario</h2>";
+    // Obtener datos del formulario //
+    
+    $dni = $_GET['dni'];
+    $nombre = $_GET['nombre'];
+    $apellido = $_GET['apellido'];
+    $año = $_GET['año'];
+    $observaciones = $_GET['observaciones'];
 
-    echo "<div style='font-size: 18.5px; padding-left 600px; padding-top: 20px;'>";
-    echo "<h3 style='display: inline; font-size: 19.5px; padding-left: 600px;'>Alumno </h3>";
-    echo "<span style:'display: inline;'>" . $nombre . "</span> <br>";
+    $sql = "INSERT INTO asistencia_alumnos (dni, nombre, apellido, año, observaciones) VALUES ('$dni', '$nombre', '$apellido', '$año', '$observaciones')";
 
-    echo "<h3 style='display: inline; font-size: 19.5px; padding-left: 600px;'>DNI: </h3>";
-    echo "<span style='display: inline;'>" . $dni . "</span><br>";
+    if ($conn->query($sql) === TRUE) {
+        echo "<script>alert('Nuevo registro creado exitosamente');</script>";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
 
-    echo "<h3 style='display: inline; font-size: 19.5px; padding-left: 600px;'>Fecha: </h3>";
-    echo "<span style='display: inline;'>" . $fecha . "</span><br>";
-    echo "</div>";
-    echo "</body>"; 
+    // Cerrar conexion //
+
+    $conn->close();
+
 ?>

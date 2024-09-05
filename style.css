@@ -20,12 +20,18 @@ label{
 
 
 form{
-    padding-top: 50px;
+    padding-top: 20px;
 }
 
 input{
     padding: 5px;
     width: 300px;
+}
+
+.box form textarea {
+    resize: none;
+    width: 310px;
+    height: 60px;
 }
 
 #submit{
