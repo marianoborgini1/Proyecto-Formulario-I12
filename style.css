@@ -1,17 +1,56 @@
-html{
-    padding: 0px;
-    margin: 0px;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f2f2f2;
+*{
+    padding: 0;
+    margin: 0;
 }
 
-.text{
-    font-size: 22px;
-    text-align: center;
+header{
+    font-weight: bolder;
+    background-color: #fdfdfd;
+    width: 100%;
+    font-family:'Times New Roman', Times, serif ;
+}
+
+header nav{
+    display: flex;
+}
+
+img{
+    padding-left: 10px;
+}
+
+hr{
+    border: 1px solid black;
+}
+
+header nav a {
+    padding-top: 27px;
+    padding-left: 22px;
+    font-size: 21px;
+    display: inline-block;
+    position: relative;
+    color: #000000;
+    text-decoration: none;
+    
+}
+
+a:after {
+    content: "";
+    display: block;
+    margin: auto;
+    height: 2px;
+    width: 0px;
+    transition: all .5s;
+}
+
+a:hover:after {
+    width: 100%;
+    background: #000000;
 }
 
 .box{
-    padding-left: 510px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 45px;
+    padding-left: 500px;
 }
 
 label{
@@ -21,6 +60,20 @@ label{
 
 form{
     padding-top: 20px;
+}
+
+form p{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.form-box{
+    padding: 15px;
+    border: 2px solid;
+    border-radius: 6px;
+    width: 320px;
+    padding-top: 2px;
+    padding-bottom: 15px;
 }
 
 input{

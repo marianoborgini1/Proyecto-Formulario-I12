@@ -9,33 +9,45 @@
 </head>
 <body>
 
-    <div class="text">
-        <h2>Asistencia de alumnos</h2>
-    </div>
+    <header>
+        <nav>
+            <img src="/img/logoi12-removebg-preview.png" alt="Logoi12" width="70px" height="70px">
+            <a href="#">Formulario</a>
+            <a href="http://www.i12.com.ar/i12/">I12</a>
+        </nav>
+    </header>
+
+    <hr>
     
     <div class="box">
-        <form action="main.php" method="get">
 
-            <label for="dni">DNI:</label> <br> 
-            <input type="number" name="dni" required> <br> <br>
+        <div class="form-box">
+            <form action="main.php" method="get">
 
-            <label for="name">Nombre:</label> <br> 
-            <input type="text" name="nombre" required> <br> <br>
+                <p>Complete con sus datos lo solictado.</p> <br>
 
-            <label for="apellido">Apellido:</label> <br> 
-            <input type="text" name="apellido" required> <br> <br>
-
-            <label for="año">Año:</label> <br> 
-            <input type="number" name="año" required> <br> <br>
-
-            <label for="observaciones">Observaciones: </label> <br>
-            <textarea name="observaciones" id="observaciones" resize="none" width="50px"></textarea> <br>
-
-            <div class="box-submit">
-                <input type="submit" value="enviar" id="submit">
-            </div>
-
-        </form>
+                <label for="dni">DNI:</label> <br> 
+                <input type="number" name="dni" required> <br> <br>
+    
+                <label for="name">Nombre:</label> <br> 
+                <input type="text" name="nombre" required> <br> <br>
+    
+                <label for="apellido">Apellido:</label> <br> 
+                <input type="text" name="apellido" required> <br> <br>
+    
+                <label for="año">Año:</label> <br> 
+                <input type="number" name="año" required> <br> <br>
+    
+                <label for="observaciones">Observaciones: </label> <br>
+                <textarea name="observaciones" id="observaciones" resize="none" width="50px"></textarea> <br>
+    
+                <div class="box-submit">
+                    <input type="submit" value="enviar" id="submit">
+                </div>
+    
+            </form>
+        </div>
+        
     </div>
     
 </body>
