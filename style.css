@@ -1,89 +1,55 @@
-*{
+body{
     padding: 0;
     margin: 0;
-}
-
-header{
-    font-weight: bolder;
-    background-color: #fdfdfd;
-    width: 100%;
-    font-family:'Times New Roman', Times, serif ;
-}
-
-header nav{
-    display: flex;
-}
-
-img{
-    padding-left: 10px;
-}
-
-hr{
-    border: 1px solid black;
-}
-
-header nav a {
-    padding-top: 27px;
-    padding-left: 22px;
-    font-size: 21px;
-    display: inline-block;
-    position: relative;
-    color: #000000;
-    text-decoration: none;
-    
-}
-
-a:after {
-    content: "";
-    display: block;
-    margin: auto;
-    height: 2px;
-    width: 0px;
-    transition: all .5s;
-}
-
-a:hover:after {
-    width: 100%;
-    background: #000000;
+    background-color: #f25b51;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .box{
-    font-family: Arial, Helvetica, sans-serif;
-    padding-top: 45px;
-    padding-left: 500px;
+    padding-top: 20px;
+    padding-left: 485px;
 }
 
 label{
-    font-size: 18px;
+    background-color: #fbfbfb;
+    font-size: 16px;
 }
 
 
 form{
-    padding-top: 20px;
+    background-color: #fbfbfb;
+    padding-top: 10px;
 }
 
-form p{
-    font-size: 18px;
+form h2{
+    background-color: #fbfbfb;
+    font-size: 22px;
     font-weight: bold;
 }
 
 .form-box{
-    padding: 15px;
-    border: 2px solid;
-    border-radius: 6px;
-    width: 320px;
-    padding-top: 2px;
+    background-color: #fbfbfb;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 9px;
+    width: 400px;
     padding-bottom: 15px;
 }
 
 input{
-    padding: 5px;
-    width: 300px;
+    padding: 10px;
+    border: 1px solid #f70f00;
+    border-radius: 5px;
+    background-color: #fbfbfb;
+    width: 374px;
 }
 
 .box form textarea {
+    border: 1px solid #f70f00;
+    border-radius: 5px;
+    background-color: #fbfbfb;
     resize: none;
-    width: 310px;
+    width: 390px;
     height: 60px;
 }
 
@@ -105,28 +71,7 @@ input{
 }
 
 .box-submit{
-    padding-top: 15px;
-    padding-left: 96px;
-}
-
-@media only screen and (max-width : 420px){
-    .box{
-        padding-left: 98px;
-    }
-
-    input{
-        padding: 5px;
-        width: 180px;
-    }
-
-    .box-submit{
-        padding-top: 15px;
-        padding-left: 30px;
-    }
-}
-
-@media only screen and (max-width : 420px){
-    .box{
-        padding-left: 80px;
-    }
+    background-color: white;
+    padding-top: 12px;
+    padding-left: 127px;
 }

@@ -1,6 +1,9 @@
 <?php
 
-    //conexion//
+    ob_start();
+
+    include('phpqrcode/qrlib.php');
+    require('C:\wamp64\www\Proyecto-Formulario-I12\fpdf\fpdf.php');
 
     $servername = "localhost";
     $username = "root";
@@ -9,16 +12,14 @@
 
     $conn = new mysqli("localhost", "root", "", "formulario_db");   
 
-    // Verificar conexion //
+    // Verificar conexion 
     if ($conn->connect_error) {
         die("conexion fallida :" . $conn->connect_error);
     }
-    
-    // Obtener datos del formulario //
-    
+
     $dni = $_GET['dni'];
-    $nombre = $_GET['nombre'];
     $apellido = $_GET['apellido'];
+    $nombre = $_GET['nombre'];
     $año = $_GET['año'];
     $observaciones = $_GET['observaciones'];
 
@@ -30,8 +31,38 @@
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
 
-    // Cerrar conexion //
+    $qr_data = "http://192.168.1.36/Proyecto-Formulario-I12/Datos_Alumnos_$dni.pdf";
+    $qr_filename = "codigo_qr_$dni.png";
+    QRcode::png($qr_data, $qr_filename, QR_ECLEVEL_L, 4);
 
+    $pdf = new FPDF();
+    $pdf-> AddPage();
+    $pdf->SetFont('Arial','',12);
+
+    $pdf->Cell(40, 10, 'Datos del Alumno');
+    $pdf->ln();
+    $pdf->Cell(40, 10, 'DNI: ' . $dni);
+    $pdf->ln();
+    $pdf->Cell(40, 10, 'Apellido: ' . $apellido);
+    $pdf->ln();
+    $pdf->Cell(40, 10, 'Nombre: ' . $nombre);
+    $pdf->ln(); 
+    $pdf->Cell(40, 10, 'Año: ' . $año);
+    $pdf->ln();
+    $pdf->Cell(40, 10, 'Observaciones: ' . $observaciones);
+    $pdf->ln();
+
+    $pdf->image($qr_filename, 10, 100, 50, 50);
+    $pdf->ln();
+
+    $pdf_filename = 'Datos_Alumnos_' . $dni . '.pdf';
+    $pdf->Output('I', $pdf_filename);
+
+    echo "<h3>Código QR generado: </h3>";
+    echo "<img src='$qr_filename' alt='Código QR'>";
+    echo "<br><a href='$pdf_filename' download='$pdf_filename'><button>Descargar PDF</button></a>";
+    echo "<br> <a href='$qr_filename' download='codigo_qr_$dni.png'> <button>Descargar QR</button></a>";
+    
     $conn->close();
 
 ?>
