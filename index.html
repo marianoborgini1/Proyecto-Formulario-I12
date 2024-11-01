@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <title>Asistencia</title>
+</head>
+<body>
+    
+    <div class="box">
+
+        <div class="form-box">
+            <form action="./Php/main.php" method="get">
+
+                <h2>Complete con sus datos lo solictado.</h2> 
+
+                <p for="DNI"> DNI</p>  
+                <input type="number" name="dni" required> <br> 
+    
+                <p for="apellido"> Apellido</p> 
+                <input type="text" name="nombre" required> <br> 
+    
+                <p for="apellido"> Nombre</p> 
+                <input type="text" name="apellido" required> <br> 
+    
+                <p for="año"> Año</p> 
+                <input type="number" name="año" required> <br> 
+    
+                <p for="observaciones"> Observaciones</p> 
+                <textarea name="observaciones" id="observaciones" resize="none" width="50px"></textarea> <br>
+    
+                <div class="box-submit">
+                    <input type="submit" value="enviar" id="submit">
+                </div>
+    
+            </form>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
