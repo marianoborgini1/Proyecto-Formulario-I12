@@ -1,44 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.php">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./CSS/style.css">
     <title>Asistencia</title>
 </head>
 <body>
-
-    <header>
-        <nav>
-            <img src="/img/logoi12-removebg-preview.png" alt="Logoi12" width="70px" height="70px">
-            <a href="#">Formulario</a>
-            <a href="http://www.i12.com.ar/i12/">I12</a>
-        </nav>
-    </header>
-
-    <hr>
     
     <div class="box">
 
         <div class="form-box">
-            <form action="main.php" method="get">
+            <form action="./Php/main.php" method="get">
 
-                <p>Complete con sus datos lo solictado.</p> <br>
+                <h2>Complete con sus datos lo solictado.</h2> 
 
-                <label for="dni">DNI:</label> <br> 
-                <input type="number" name="dni" required> <br> <br>
+                <p for="DNI"> DNI</p>  
+                <input type="number" name="dni" required> <br> 
     
-                <label for="name">Nombre:</label> <br> 
-                <input type="text" name="nombre" required> <br> <br>
+                <p for="apellido"> Apellido</p> 
+                <input type="text" name="nombre" required> <br> 
     
-                <label for="apellido">Apellido:</label> <br> 
-                <input type="text" name="apellido" required> <br> <br>
+                <p for="apellido"> Nombre</p> 
+                <input type="text" name="apellido" required> <br> 
     
-                <label for="año">Año:</label> <br> 
-                <input type="number" name="año" required> <br> <br>
+                <p for="año"> Año</p> 
+                <input type="number" name="año" required> <br> 
     
-                <label for="observaciones">Observaciones: </label> <br>
+                <p for="observaciones"> Observaciones</p> 
                 <textarea name="observaciones" id="observaciones" resize="none" width="50px"></textarea> <br>
     
                 <div class="box-submit">
